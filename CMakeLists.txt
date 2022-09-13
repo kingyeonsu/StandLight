@@ -7,12 +7,14 @@ add_executable(${PROJECT_NAME}
     ./src/hw/Button/Button.cpp
     ./src/hw/Led/Led.cpp
     ./src/app/Listener/Listener.cpp
+    ./src/app/Controller/Controller.cpp
 )
 
 target_include_directories(${PROJECT_NAME}  PUBLIC
     ./src/hw/Button
     ./src/hw/Led
     ./src/app/Listener
+    ./src/app/Controller
 )
 
 target_link_libraries(${PROJECT_NAME}   PUBLIC

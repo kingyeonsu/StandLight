@@ -1,8 +1,8 @@
 #include <iostream>
+#include <wiringPi.h>
 #include "Button.h"
 #include "Led.h"
 #include "Listener.h"
-#include <wiringPi.h>
 
 int main(void)
 {
@@ -10,7 +10,8 @@ int main(void)
     
     Button button1(27);
     Led led1(25);
-    Listener listener(&button1, &led1);
+    Controller control(&led1);
+    Listener listener(&button1, &control);
 
     while (1)
     {
